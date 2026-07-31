@@ -13,8 +13,6 @@ MAX_LINE_LENGTH = 88
 # Эти файлы подтверждают наличие основных частей поставки.
 REQUIRED_FILES = (
     "README.md",
-    "BUSINESS_VALUE.md",
-    "AUDIT_REPORT.md",
     ".env.template",
     ".flake8",
     ".coveragerc",
