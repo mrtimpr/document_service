@@ -213,23 +213,6 @@ docker compose down
 docker compose down -v
 ```
 
-## Удаленный Git-репозиторий
-
-```bash
-git init
-git add .
-git commit -m "Initial diploma project"
-git branch -M main
-git remote add origin <URL_РЕПОЗИТОРИЯ>
-git push -u origin main
-```
-
-Файл `.env` исключен из Git. В репозитории должен храниться только `.env.template`.
-
-## Бизнес-аспекты
-
-Расчет экономии времени, финансового эффекта, окупаемости, KPI, рисков и сценариев приведен в `BUSINESS_VALUE.md`. Все цифры помечены как сценарные допущения и должны быть заменены фактическими данными организации при защите.
-
 ## Возможные улучшения
 
 - S3/MinIO вместо локального media volume;

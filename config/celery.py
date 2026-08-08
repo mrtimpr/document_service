@@ -1,0 +1,11 @@
+"""Конфигурация Celery и автоматическое обнаружение фоновых задач."""
+
+import os
+
+from celery import Celery
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+
+app = Celery("document_service")
+app.config_from_object("django.conf:settings", namespace="CELERY")
+app.autodiscover_tasks()
