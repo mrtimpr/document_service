@@ -17,7 +17,7 @@ from documents.tasks import notify_admin_about_new_document
 
 @extend_schema_view(
     list=extend_schema(tags=["Documents"]),
-    create=extend_schema(tags=["Documents"]),
+    create=extend_schema(tags=["Documents"], request={"multipart/form-data": DocumentCreateSerializer}),
     retrieve=extend_schema(tags=["Documents"]),
     destroy=extend_schema(tags=["Documents"]),
     download=extend_schema(
@@ -32,7 +32,7 @@ class DocumentViewSet(
     mixins.DestroyModelMixin,
     viewsets.GenericViewSet,
 ):
-    """Управлять документами с учетом владельца и прав администратора."""
+    """Управление документами с учетом владельца и прав администратора."""
 
     parser_classes = (parsers.MultiPartParser, parsers.FormParser)
     permission_classes = (permissions.IsAuthenticated,)

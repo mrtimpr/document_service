@@ -147,6 +147,7 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "API загрузки и модерации пользовательских документов.",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "COMPONENT_SPLIT_REQUEST": True,
     "SERVE_PERMISSIONS": ["rest_framework.permissions.AllowAny"],
 }
 

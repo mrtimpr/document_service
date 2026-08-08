@@ -8,7 +8,7 @@ from documents.validators import validate_file_size
 
 
 class Document(models.Model):
-    """Хранить файл, владельца, статус и результат проверки документа."""
+    """Хранит файл, владельца, статус и результат проверки документа."""
 
     class Status(models.TextChoices):
         """Допустимые состояния документа в процессе модерации."""
