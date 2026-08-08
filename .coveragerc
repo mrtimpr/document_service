@@ -1,0 +1,19 @@
+[run]
+branch = True
+source =
+    config
+    documents
+    users
+omit =
+    */migrations/*
+    */tests/*
+    config/asgi.py
+    config/wsgi.py
+
+[report]
+show_missing = True
+skip_covered = False
+fail_under = 75
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:
